@@ -1,5 +1,5 @@
-from menu.menu import menu
-from menu.menu import alfa
+from all_fungsi.menu import menu
+from all_fungsi.alfa import alfa
 
 """fungsi persegi panjang"""
 def luas_persegi_panjang():

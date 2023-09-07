@@ -1,5 +1,5 @@
-from menu.menu import menu
-from menu.menu import alfa
+from all_fungsi.menu import menu
+from all_fungsi.alfa import alfa
 from osiloscop.osiloscop import osiloscop
 from luas_persegi.luas_persegi import luas_persegi_panjang
 
