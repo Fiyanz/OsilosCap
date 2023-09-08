@@ -1,15 +1,7 @@
 from all_fungsi.menu import menu
 from all_fungsi.alfa import alfa
-from all_fungsi.int_type import type_int
+from all_fungsi.cek_int_type import cek_input
 
-
-def vpp(Vdiv, div_s):
-    if (type_int(Vdiv) and type_int(div_s)):
-        return Vdiv, div_s
-    
-    else:
-        print("Masukan angka please!!")
-        
 
  
 
@@ -30,9 +22,9 @@ def osiloscop():
                 Vdiv = int(input("Masukan DIV/V: "))
                 div_s = int(input("Masukan DIV/v: "))
                 
-                Vdiv, div_s = vpp(Vdiv, div_s)
+                Vdiv, div_s = cek_input(Vdiv, div_s)
                 value_vpp = Vdiv * div_s
-                print(f" Hasil Volt Peak to Peak 'VPP': {value_vpp}")
+                print(f"Hasil Volt Peak to Peak 'VPP': {value_vpp}")
                 
             except ValueError:
                 print("Masukan input Angka please!!")

@@ -22,18 +22,18 @@ def main():
             if input_user == 1:
                 osiloscop()
                 os.system('cls')
-            """pemangilan fungsi persegi panjang"""
-            if input_user == 2:
-                luas_persegi_panjang()
-                os.system('cls')
-            """pemangilan fungsi persegi"""
-            if input_user == 1:
-                luas_persegi_panjang()
-                os.system('cls')
-            """pemangilan fungsi GLBB"""
-            if input_user == 1:
-                luas_persegi_panjang()
-                os.system('cls')
+            # """pemangilan fungsi persegi panjang"""
+            # if input_user == 2:
+            #     luas_persegi_panjang()
+            #     os.system('cls')
+            # """pemangilan fungsi persegi"""
+            # if input_user == 1:
+            #     luas_persegi_panjang()
+            #     os.system('cls')
+            # """pemangilan fungsi GLBB"""
+            # if input_user == 1:
+            #     luas_persegi_panjang()
+            #     os.system('cls')
 
 
         except ValueError:
