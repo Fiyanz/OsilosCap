@@ -1,5 +1,6 @@
 from all_fungsi.menu import menu
 from all_fungsi.alfa import alfa
+from all_fungsi.cek_int_type import cek_input
 
 """fungsi persegi panjang"""
 def luas_persegi_panjang():
@@ -17,6 +18,7 @@ def luas_persegi_panjang():
             try:
                 panjang = int(input("Masukan panjang: "))
                 lebar = int(input("Masukan lebar: "))
+                panjang, lebar = cek_input(panjang, lebar)
                 luas = panjang * lebar
                 print(f"Luas Persegi panjang {luas}")
                 
