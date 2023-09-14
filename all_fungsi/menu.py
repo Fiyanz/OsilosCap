@@ -1,11 +1,15 @@
 import os
 
 """fungsi menu"""
-def menu(title = "", title_sec = "", list_1 = "", list_2 = "", list_3 = "", list_4 = ""):
+title = '''
+==========================================
+      SELAMAT DATANG DI TOOLS UNTUK
+MENGHITUNG BEBERAPA PERHITUNGAN MATEMATIKA
+==========================================
+'''
+def menu(title_sec = "", list_1 = "", list_2 = "", list_3 = "", list_4 = ""):
     os.system('cls')
-    print('='* 50)
     print(title)
-    print('='* 50)
     print(f'{title_sec}\n\n'
           f'{list_1}\n'
           f'{list_2}\n'
@@ -14,4 +18,3 @@ def menu(title = "", title_sec = "", list_1 = "", list_2 = "", list_3 = "", list
     
 
 
-# alfa()

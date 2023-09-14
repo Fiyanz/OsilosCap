@@ -11,38 +11,33 @@ def main():
     loop = True
 
     while loop:
-        menu("tools simple kalkulator",
-            "",
+        menu("",
             "1. Osiloscop",
             "2. luas persegi panjang",
             "3. GLBB",)
-        try:
-            input_user = int(input("Pilih Metode Perhitungan: "))
-            """pemangilan fungsi osiloscop"""
-            if input_user == 1:
-                osiloscop()
-                os.system('cls')
-            # """pemangilan fungsi persegi panjang"""
-            # if input_user == 2:
-            #     luas_persegi_panjang()
-            #     os.system('cls')
-            # """pemangilan fungsi persegi"""
-            # if input_user == 1:
-            #     luas_persegi_panjang()
-            #     os.system('cls')
-            # """pemangilan fungsi GLBB"""
-            # if input_user == 1:
-            #     luas_persegi_panjang()
-            #     os.system('cls')
+        
+        input_user = input("Pilih Metode Perhitungan: ")
 
+        # pemangilan fungsi osiloscop
+        if input_user == '1':
+            osiloscop()
+        #pemangilan fungsi persegi panjang
+        elif input_user == '2':
+            luas_persegi_panjang()
+        # pemangilan fungsi persegi
+        elif input_user == '3':
+            luas_persegi_panjang()
+        # pemangilan fungsi GLBB
+        elif input_user == '4':
+            luas_persegi_panjang()
+        
 
-        except ValueError:
-            exit_input = input("ingin keluar? ")
-            if exit_input == 'x'or 'X' and not alfa():
-                main()
-            elif exit_input == 'y'or 'Y':
-                loop = False
-                os.system('cls')
+        exit_input = input("ingin keluar? ")
+        if exit_input == 'x'or 'X' and not alfa():
+            main()
+        elif exit_input == 'y'or 'Y':
+            loop = False
+            os.system('cls')
 
 
 
