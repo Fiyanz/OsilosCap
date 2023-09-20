@@ -3,7 +3,8 @@ from all_fungsi.alfa import alfa
 from all_fungsi.cek_int_type import cek_input
 
 
- 
+def vdd():
+    pass
 
 """fungsi osiloscop"""
 def osiloscop():
@@ -13,7 +14,7 @@ def osiloscop():
         if answer == 'y' or 'Y' and not alfa():
             # print(type(answer))
             # loop = False  
-            menu("LUAS PERSEGI", 
+            menu("", 
                  "Gunakan perintah 'x' untuk keluar\nGunakan 'y' untuk melanjutkan",
                  "'DIV/V' adalah tinggi gelombang dari atas ke bawah atau Vertikal",
                  "'DIV/v' adalah ")
