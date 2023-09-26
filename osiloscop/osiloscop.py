@@ -6,7 +6,7 @@ from all_fungsi.cek_int_type import cek_input
 def vdd():
     Vdiv = int(input("Masukan DIV/V: "))
     div_s = int(input("Masukan DIV/v: "))
-                
+    print(Vdiv, div_s)
     Vdiv, div_s = cek_input(Vdiv, div_s)
     value_vpp = Vdiv * div_s
     print(f"Hasil Volt Peak to Peak 'VPP': {value_vpp}")
@@ -16,16 +16,18 @@ def osiloscop():
     loop = True
     while loop:
         menu("",
-            "1. Osiloscop",
-            "2. luas persegi panjang",
-            "3. GLBB",)
+            "1. VDD",
+            "2. Frekuansi",
+            "3. ",)
         
         input_osiloscom = input("Pilih Metode Perhitungan: ")
         
         if input_osiloscom == '1':
             vdd()
-            
 
+        elif input_osiloscom == '2':
+            print('hai')
+            
 
 
         # answer = input("lanjut perhitungan vdd? ")
