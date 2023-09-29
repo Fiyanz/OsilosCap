@@ -32,12 +32,13 @@ def main():
             luas_persegi_panjang()
         
 
-        exit_input = input("ingin keluar? ")
-        if exit_input == 'x'or 'X' and not alfa():
-            main()
-        elif exit_input == 'y'or 'Y':
+        # exit_input = input("ingin keluar? ")
+        elif input_user == 'y'or 'Y':
             loop = False
-            os.system('cls')
+            os.system(['clear', 'cls'][os.name == 'nt'])
+
+        elif input_user  == 'x'or 'X' and not alfa():
+            main()
 
 
 

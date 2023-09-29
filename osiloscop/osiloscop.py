@@ -1,19 +1,21 @@
 from all_fungsi.menu import menu
 from all_fungsi.alfa import alfa
-from all_fungsi.cek_int_type import cek_input
 
 
 def vdd():
-    Vdiv = int(input("Masukan DIV/V: "))
-    div_s = int(input("Masukan DIV/v: "))
-    print(Vdiv, div_s)
+    # DivVertikal = tinggi rekuanesi atau tinggi glelombang per div
+    # VoltDiv = besar volt per div di osiloscop
+    while True:
+        # next mengatasi clear sesudah looping 
+        try:
+            VoltDiv = float(input("Masukan Volt/Div: "))
+            DivVertikal = float(input("Masukan DivVertikal: "))
+            finall_vpp = VoltDiv * DivVertikal
+            print(f"Hasil Volt Peak to Peak 'VPP': {finall_vpp}")
+            # print(VoltDiv, DivVertikal)
+        except ValueError:
+            return False
 
-    # entah kenapa code dibawah tidak di exsekusi 
-    # masih mencari dimana kesalahannya
-    Vdiv, div_s = cek_input(Vdiv, div_s)
-    value_vpp = Vdiv * div_s
-    return value_vpp
-    # print(f"Hasil Volt Peak to Peak 'VPP': {value_vpp}")
 
 """fungsi osiloscop"""
 def osiloscop():
@@ -26,27 +28,21 @@ def osiloscop():
         
         input_osiloscop = input("Pilih Metode Perhitungan: ")
         
-        if input_osiloscop == '1':
-            vdd()
-
-        elif input_osiloscop == '2':
-            print('hai')
-            
+        match input_osiloscop:
+            case '1': print(vdd())
+            case '2': print('hi')
+            case 'x': return False
 
 
-        # answer = input("lanjut perhitungan vdd? ")
-        # if answer == 'y' or 'Y' and not alfa():
-        #     # print(type(answer))
-        #     # loop = False  
-        #     menu("", 
-        #          "Gunakan perintah 'x' untuk keluar\nGunakan 'y' untuk melanjutkan",
-        #          "'DIV/V' adalah tinggi gelombang dari atas ke bawah atau Vertikal",
-        #          "'DIV/v' adalah ")
-            
+        # if input_osiloscop == '1':
+        #     vdd()
 
-        # elif answer == 'x' or 'X' and not alfa():
+        # elif input_osiloscop == '2':
+        #     print('a')
+
+        # elif input_osiloscop == 'x' or 'X' and not alfa():
         #     # print(type(answer))
         #     loop = False
 
         # elif alfa():
-        #     print("Masukan huruf sesuai perintah!!")
+        #     loop = False
