@@ -1,7 +1,7 @@
-from all_fungsi.menu import menu
+import fungsi.menu
 from all_fungsi.alfa import alfa
-from osiloscop.osiloscop import osiloscop
-from luas_persegi.luas_persegi import luas_persegi_panjang
+from fungsi.osiloscop import osiloscop
+from fungsi.luas_persegi import luas_persegi_panjang
 
 import os
   
