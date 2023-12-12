@@ -1,7 +1,6 @@
-import fungsi.menu
-from all_fungsi.alfa import alfa
-from fungsi.osiloscop import osiloscop
-from fungsi.luas_persegi import luas_persegi_panjang
+import fungsi.menu as menu
+import fungsi.osiloscop as osiloscop
+import fungsi.luasPersegi as luasPersegi
 
 import os
   
@@ -18,27 +17,15 @@ def main():
         
         input_user = input("Pilih Metode Perhitungan: ")
 
-        # pemangilan fungsi osiloscop
-        if input_user == '1':
-            osiloscop()
-        #pemangilan fungsi persegi panjang
-        elif input_user == '2':
-            luas_persegi_panjang()
-        # pemangilan fungsi persegi
-        elif input_user == '3':
-            luas_persegi_panjang()
-        # pemangilan fungsi GLBB
-        elif input_user == '4':
-            luas_persegi_panjang()
         
 
-        # exit_input = input("ingin keluar? ")
-        elif input_user == 'y'or 'Y':
-            loop = False
-            os.system(['clear', 'cls'][os.name == 'nt'])
+        # # exit_input = input("ingin keluar? ")
+        # elif input_user == 'y'or 'Y':
+        #     loop = False
+        #     os.system(['clear', 'cls'][os.name == 'nt'])
 
-        elif input_user  == 'x'or 'X' and not alfa():
-            main()
+        # elif input_user  == 'x'or 'X' and not alfa():
+        #     main()
 
 
 

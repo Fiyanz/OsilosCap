@@ -7,7 +7,7 @@ title = '''
 MENGHITUNG BEBERAPA PERHITUNGAN MATEMATIKA
 ==========================================
 '''
-def menu(title_sec = "", list_1 = "", list_2 = "", list_3 = "", list_4 = ""):
+def menu(title_sec: str, list_1: str, list_2: str, list_3: str, list_4: str):
     """
     fungsi menu
       ==========================================
