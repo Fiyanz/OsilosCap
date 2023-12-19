@@ -19,4 +19,17 @@ def persegi(sisi: int | float)-> float:
     """    
     return sisi * sisi
 
+def luasSegitiga(a: float | int, t: float | int) -> float:
+    """
+    fungsi untuk menghitung luas segitiga
+
+    parameter:
+    a: alas segitiga
+    t: tinggi segitiga
+    """
+    return 0.5 * a * t
+
+
+print(luasSegitiga(8, 12))
+
 
