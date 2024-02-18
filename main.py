@@ -1,6 +1,6 @@
 import fungsi.menu as menu
 import fungsi.osiloscop as osiloscop
-import fungsi.luasPersegi as luasPersegi
+
 
 import os
   
