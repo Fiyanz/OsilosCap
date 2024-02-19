@@ -4,24 +4,27 @@ import os
 title = '''
 ==========================================
       SELAMAT DATANG DI TOOLS UNTUK
-MENGHITUNG BEBERAPA PERHITUNGAN MATEMATIKA
+          MENGHITUNG OSILOSCOP
 ==========================================
 '''
-def menu(title_sec: str, list_1: str, list_2: str, list_3: str, list_4: str):
+def menu(list_1: str | None, list_2: str | None, list_3: str | None, list_4: str | None) -> None:
     """
     fungsi menu
       ==========================================
             SELAMAT DATANG DI TOOLS UNTUK
       MENGHITUNG BEBERAPA PERHITUNGAN MATEMATIKA
       ==========================================
-    
+    title_set: menempilakn sebuah judul
+    list_1: list ke 1
+    list_2: list ke 2
+    list_3: list ke 3
+    list_4: list ke 4
     """
     win = 'cls'
     linux = 'clear'
     os.system([linux, win][os.name == 'nt'])
     print(title)
-    print(f'{title_sec}\n\n'
-          f'{list_1}\n'
+    print(f'{list_1}\n'
           f'{list_2}\n'
           f'{list_3}\n'
           f'{list_4}')

@@ -34,9 +34,9 @@ def frekuansi(DivHorisontal: int | float, TimeDiv: int | float) -> float:
 
 
 
-if __name__ == "__main__":
-    print(frekuansi(3, "4"))
-    print(vpp(5,"4"))
+# if __name__ == "__main__":
+#     print(frekuansi(3, "4"))
+#     print(vpp(5,"4"))
 
 
 
