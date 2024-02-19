@@ -1,4 +1,5 @@
 from fungsi.menu import menu
+from fungsi.menu import clear
 
 import fungsi.osiloscop as osiloscop
 import os
@@ -7,10 +8,10 @@ import os
 """main fungsion"""
 def main():
     loop = True
+    menu("1. Osiloscop",
+            "2. luas persegi panjang")
 
     while loop:
-        menu("1. Osiloscop",
-             "2. luas persegi panjang")
         
         input_user = input("Pilih Metode Perhitungan: ")
 
@@ -28,6 +29,8 @@ def main():
 
         elif input_user == 'x':
             loop = False
+            clear()
+            
 
 
 
