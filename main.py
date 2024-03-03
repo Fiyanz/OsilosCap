@@ -5,16 +5,19 @@ import fungsi.osiloscop as osiloscop
 
   
 
-def handleVpp():
-    # next handle eror input waktu memasukan selain float dan int
-    # juga mungkin buat fungsi baru untuk mencari waktu agar lebih spesifik
+def handleVpp() -> None:
+    
     loop = True
     while loop:
         menu("")
-        VoltDiv = float(input("Masukan Volt/Div: "))
-        DivVertikal = float(input("Masukan Div Vertikal: "))
-        HasilVPP = osiloscop.vpp(VoltDiv=VoltDiv, DivVertikal=DivVertikal)
-        print(f"Hasil VPP dari {VoltDiv} dan {DivVertikal} = {HasilVPP}")
+        try:
+            VoltDiv = float(input("Masukan Volt/Div: "))
+            DivVertikal = float(input("Masukan Div Vertikal: "))
+            HasilVPP = osiloscop.vpp(VoltDiv=VoltDiv, DivVertikal=DivVertikal)
+            print(f"VPP = {HasilVPP}")
+        except:
+            print("Masukan nilai dengan angka\n")
+            print("Jika nilai desimal gunakan '.' (titik)")
 
         close = input("Kembali ke menu (y/n) ")
         if close == 'y':
@@ -24,10 +27,31 @@ def handleFrequensi() -> None:
     loop = True
     while loop:
         menu("Masukan Time/Div dengan satuan 's'")
-        DivHorisintal = float(input("Masukan Div Horisontal: "))
-        TimeDiv = float(input("Masukan Time Div: "))
-        HasilFrekuensi = osiloscop.frekuansi(DivHorisontal= DivHorisintal, TimeDiv=TimeDiv)
-        print(f"Frequensi dari {DivHorisintal} dan {TimeDiv} = {HasilFrekuensi}")
+        try:
+            DivHorisintal = float(input("Masukan Div Horisontal: "))
+            TimeDiv = float(input("Masukan Time Div: "))
+            HasilFrekuensi = osiloscop.frekuansi(DivHorisontal= DivHorisintal, TimeDiv=TimeDiv)
+            print(f"Frequensi = {HasilFrekuensi}")
+        except:
+            print("Masukan nilai dengan angka\n")
+            print("Jika nilai desimal gunakan '.' (titik)")
+
+        close = input("Kembali ke menu (y/n) ")
+        if close == 'y':
+            loop = False
+
+def handleTime() -> None:
+    loop = True
+    while loop:
+        menu("Masukan Time/Div dengan satuan 's'")
+        try:
+            DivHorisintal = float(input("Masukan Div Horisontal: "))
+            TimeDiv = float(input("Masukan Time Div: "))
+            HasilFrekuensi = osiloscop.frekuansi(DivHorisontal= DivHorisintal, TimeDiv=TimeDiv)
+            print(f"Time = {HasilFrekuensi}")
+        except:
+            print("Masukan nilai dengan angka\n")
+            print("Jika nilai desimal gunakan '.' (titik)")
 
         close = input("Kembali ke menu (y/n) ")
         if close == 'y':
@@ -39,9 +63,10 @@ def main():
     loop = True
 
     while loop:
-        menu("1. Osiloscop",
-             "2. luas persegi panjang",
-             "n. untuk keluar")
+        menu("1. Vpp",
+             "2. Frekuensi",
+             "3. Time",
+             "('n') untuk keluar")
         
         input_user = input("Pilih Metode Perhitungan: ")
 
@@ -50,6 +75,9 @@ def main():
 
         elif input_user == '2':
             handleFrequensi()
+        
+        elif input_user == '3':
+            handleTime()
 
         elif input_user == 'n':
             loop = False
